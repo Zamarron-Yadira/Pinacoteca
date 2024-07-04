@@ -1,0 +1,25 @@
+﻿@model PU5Pinacoteca.Models.ViewModels.PintoresViewModel
+@{
+    Layout = "Layout";
+}
+<section id="colecciones">
+    @foreach (var item in Model.Paises)
+    {
+        <h1>@item.NombrePais</h1>
+        <div class="obras-lista">
+            @foreach (var p in item.Pintores)
+            {
+                <div class="pintor">
+                    <div class="pais-seccion">
+                        <a class="imgObra" href="~/Home/VerPintor/@(p.Nombre.Replace(" ","-"))">
+                            <img src="~/Pintores/@(p.Id).jpg" alt="Artista" />
+                        </a>
+                        <h3 class="nombre">@p.Nombre</h3>
+                        <p class="fecha-nacim">@p.FechaNacim</p>
+                        <p class="fecha-falleci">@p.FechaFallec</p>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</section>

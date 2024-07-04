@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pinacoteca</title>
+    <link href="~/Styles/estilopincipal.css" rel="stylesheet" />
+    <link href="~/Logo_1.jpg" rel="icon" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <img src="~/Logo_1.jpg" alt="Logotipo de Pinacoteca" />
+        <h1>Museo de arte extraordinario</h1>
+         <a href="~/Home/Login">Iniciar sesión</a>
+        
+    </header>
+
+    <nav>
+        <a href="~/Home">Principal</a>
+        <a href="~/Home/Cuadros">Cuadros</a>
+        <a href="~/Home/Pintores">Pintores</a>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <p>&copy; 2023 Pinacoteca. Programación Web.</p>
+    </footer>
+</body>
+</html>
+

@@ -1,0 +1,26 @@
+﻿@model PU5Pinacoteca.Models.ViewModels.CuadrosViewModel
+@{
+    Layout = "Layout";
+}
+<section id="colecciones">
+    @foreach (var item in Model.Colecciones)
+    {
+        <h1>@item.Clasificacion</h1>
+
+        <div class="obras-lista">
+            @foreach (var i in item.Cuadros)
+            {
+                <div class="obra">
+                    <div class="pais-seccion">
+                        <a class="imgObra" href="~/Home/VerCuadro/@i.Nombre">
+                            <img src="~/Cuadros/@(i.Id).jpg" alt="Obra" />
+                        </a>
+                        <h3>@i.Nombre</h3>
+                        <p>@i.NombrePintor</p>
+                    </div>
+                </div>
+            }
+
+        </div>
+    }
+</section>

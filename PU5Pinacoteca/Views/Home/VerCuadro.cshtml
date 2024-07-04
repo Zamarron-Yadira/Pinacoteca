@@ -1,0 +1,25 @@
+﻿@model PU5Pinacoteca.Models.ViewModels.VerCuadroViewModel
+@{
+    Layout = "Layout";
+}
+<div class="est">
+    <div class="estampilla">
+        <img src="~/Cuadros/@(Model.Id).jpg" alt="Imagen del cuadro" />
+        <h3>@Model.Pintor</h3>
+        <p><strong>Fecha de pintado:</strong> @Model.FechaPintado</p>
+        <p><strong>Técnica:</strong>@Model.Tecnica</p>
+        <p><strong>Dimensiones:</strong> @Model.Dimensiones</p>
+        <p><strong>Colección:</strong>@Model.Coleccion</p>
+    </div>
+    <div class="descripcion">
+        <h1>@Model.Titulo.Replace("-", " ")</h1>
+        <p>
+            @Model.Descripcion
+        </p>
+    </div>
+    <div class="botones">
+        <a class="button" href="~/Home/Cuadros">
+            <img src="~/images/hogar.png" alt="Obra" />
+        </a>
+    </div>
+</div>
